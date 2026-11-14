@@ -15,6 +15,22 @@
 
 ---
 
+### Destaques
+
+**[open3dcalc](https://github.com/ils15/open3dcalc)** · 17 estrelas
+Calculadora de impressão 3D e utilitários de fluxo G-code. É o repositório mais usado do perfil.
+
+**[curupira-gis](https://github.com/ils15/curupira-gis)**
+SIG desktop para monitoramento florestal. Rust e egui na interface, dados em PostGIS com SIRGAS 2000 (SRID 4674).
+
+**[geoaltitude](https://github.com/ils15/geoaltitude)**
+Converte altitude geométrica em ortométrica usando o modelo geoidal do IBGE. O erro que evita é de metros, e é justamente ele que quebra nivelamento em campo.
+
+**[rbmc-ntrip-real-time-monitor](https://github.com/ils15/rbmc-ntrip-real-time-monitor)**
+Acompanha em tempo real a saúde de streams NTRIP/RTK: latência, idade da correção e queda de sinal. Serve para saber se o problema é o receptor ou a base.
+
+---
+
 ### O que eu faço
 
 | Área | Atuação |
@@ -26,15 +42,11 @@
 
 ---
 
-### Projetos em destaque
+### Outros projetos
 
 | Projeto | O que é | Stack |
 | :--- | :--- | :--- |
-| **[curupira-gis](https://github.com/ils15/curupira-gis)** | SIG desktop para monitoramento florestal, sobre PostGIS com datum brasileiro. | ![Rust](https://img.shields.io/badge/Rust-3B82F6?style=flat-square&logo=rust&logoColor=white) ![PostGIS](https://img.shields.io/badge/PostGIS-38BDF8?style=flat-square) |
-| **[open3dcalc](https://github.com/ils15/open3dcalc)** | Calculadora para impressão 3D e fluxo de G-code. | ![TypeScript](https://img.shields.io/badge/TypeScript-3B82F6?style=flat-square&logo=typescript&logoColor=white) |
-| **[geoaltitude](https://github.com/ils15/geoaltitude)** | Conversão de altitude pelo modelo geoidal do IBGE. | ![TypeScript](https://img.shields.io/badge/TypeScript-3B82F6?style=flat-square&logo=typescript&logoColor=white) |
 | **[br-deforestation](https://github.com/ils15/br-deforestation)** | Visualização de dados de desmatamento no Brasil. | ![TypeScript](https://img.shields.io/badge/TypeScript-3B82F6?style=flat-square&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-38BDF8?style=flat-square&logo=python&logoColor=white) |
-| **[rbmc-ntrip-real-time-monitor](https://github.com/ils15/rbmc-ntrip-real-time-monitor)** | Monitoramento de fluxos de correção NTRIP/RTK em tempo real. | ![JavaScript](https://img.shields.io/badge/JavaScript-3B82F6?style=flat-square&logo=javascript&logoColor=white) |
 | **[condominio-dados-abertos](https://github.com/ils15/condominio-dados-abertos)** | Portal de dados abertos da manutenção predial (NBR 5674). | ![TypeScript](https://img.shields.io/badge/TypeScript-3B82F6?style=flat-square&logo=typescript&logoColor=white) |
 | **[pantheon-opencode](https://github.com/ils15/pantheon-opencode)** | Orquestração multiagente para agentes de código. | ![JavaScript](https://img.shields.io/badge/JavaScript-3B82F6?style=flat-square&logo=javascript&logoColor=white) |
 | **[download_manager](https://github.com/ils15/download_manager)** | Gerenciador de downloads em Rust para Windows. | ![Rust](https://img.shields.io/badge/Rust-3B82F6?style=flat-square&logo=rust&logoColor=white) |
