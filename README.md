@@ -17,25 +17,42 @@
 
 ### Destaques
 
-**[open3dcalc](https://github.com/ils15/open3dcalc)** · 17 estrelas
+<table>
+<tr>
+<td width="340" valign="top">
+<a href="https://github.com/ils15/open3dcalc"><img src="./assets/projects/open3dcalc.webp" alt="Interface do Open3DCalc" width="320" /></a>
+</td>
+<td valign="top">
 
-<img src="./assets/projects/open3dcalc.webp" alt="Interface do Open3DCalc: seleção de tecnologia de impressão, moeda base e cálculo de custo" width="100%" />
+**[open3dcalc](https://github.com/ils15/open3dcalc)** · 17 estrelas
 
 Calculadora de impressão 3D e utilitários de fluxo G-code. É o repositório mais usado do perfil.
 
-**[geoaltitude](https://github.com/ils15/geoaltitude)**
+</td>
+</tr>
+<tr>
+<td width="340" valign="top">
+<a href="https://github.com/ils15/geoaltitude"><img src="./assets/projects/geoaltitude.webp" alt="Interface do OpenGeoaltitude" width="320" /></a>
+</td>
+<td valign="top">
 
-<img src="./assets/projects/geoaltitude.webp" alt="Interface do OpenGeoaltitude: conversão de altitude em lote com o geóide oficial" width="100%" />
+**[geoaltitude](https://github.com/ils15/geoaltitude)**
 
 Converte altitude geométrica em ortométrica usando o modelo geoidal do IBGE. O erro que evita é de metros, e é justamente ele que quebra nivelamento em campo.
 
-**[curupira-gis](https://github.com/ils15/curupira-gis)**
-
-SIG desktop para monitoramento florestal. Rust e egui na interface, dados em PostGIS com SIRGAS 2000 (SRID 4674).
+</td>
+</tr>
+<tr>
+<td width="340" valign="top"></td>
+<td valign="top">
 
 **[rbmc-ntrip-real-time-monitor](https://github.com/ils15/rbmc-ntrip-real-time-monitor)**
 
 Acompanha em tempo real a saúde de streams NTRIP/RTK: latência, idade da correção e queda de sinal. Serve para saber se o problema é o receptor ou a base.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -44,26 +61,26 @@ Acompanha em tempo real a saúde de streams NTRIP/RTK: latência, idade da corre
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/ils15/br-deforestation"><img src="./assets/projects/br-deforestation.webp" alt="Painel BR Deforestation com indicadores de desmatamento" width="100%" /></a>
+<a href="https://github.com/ils15/br-deforestation"><img src="./assets/projects/br-deforestation.webp" alt="Painel BR Deforestation" width="300" /></a><br/>
 <b><a href="https://github.com/ils15/br-deforestation">br-deforestation</a></b><br/>
-<sub>Visualização de dados de desmatamento no Brasil</sub>
+<sub>Dados de desmatamento no Brasil</sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/ils15/condominio-dados-abertos"><img src="./assets/projects/condominio-dados-abertos.webp" alt="Portal de dados abertos do condomínio conforme NBR 5674" width="100%" /></a>
+<a href="https://github.com/ils15/condominio-dados-abertos"><img src="./assets/projects/condominio-dados-abertos.webp" alt="Portal de dados abertos do condomínio" width="300" /></a><br/>
 <b><a href="https://github.com/ils15/condominio-dados-abertos">condominio-dados-abertos</a></b><br/>
-<sub>Transparência da manutenção predial, NBR 5674</sub>
+<sub>Manutenção predial, NBR 5674</sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/ils15/brasileirao-2026"><img src="./assets/projects/brasileirao-2026.webp" alt="Painel do Brasileirão 2026 com classificação da Série A" width="100%" /></a>
+<a href="https://github.com/ils15/brasileirao-2026"><img src="./assets/projects/brasileirao-2026.webp" alt="Painel do Brasileirão 2026" width="300" /></a><br/>
 <b><a href="https://github.com/ils15/brasileirao-2026">brasileirao-2026</a></b><br/>
 <sub>Painel de dados da Série A</sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/ils15/pantheon-opencode"><img src="./assets/projects/pantheon-opencode.webp" alt="Documentação do Pantheon, sistema de orquestração multiagente" width="100%" /></a>
+<a href="https://github.com/ils15/pantheon-opencode"><img src="./assets/projects/pantheon-opencode.webp" alt="Documentação do Pantheon" width="300" /></a><br/>
 <b><a href="https://github.com/ils15/pantheon-opencode">pantheon-opencode</a></b><br/>
-<sub>Orquestração multiagente para agentes de código</sub>
+<sub>Orquestração multiagente</sub>
 </td>
 </tr>
 </table>
