@@ -18,16 +18,55 @@
 ### Destaques
 
 **[open3dcalc](https://github.com/ils15/open3dcalc)** · 17 estrelas
+
+<img src="./assets/projects/open3dcalc.webp" alt="Interface do Open3DCalc: seleção de tecnologia de impressão, moeda base e cálculo de custo" width="100%" />
+
 Calculadora de impressão 3D e utilitários de fluxo G-code. É o repositório mais usado do perfil.
 
-**[curupira-gis](https://github.com/ils15/curupira-gis)**
-SIG desktop para monitoramento florestal. Rust e egui na interface, dados em PostGIS com SIRGAS 2000 (SRID 4674).
-
 **[geoaltitude](https://github.com/ils15/geoaltitude)**
+
+<img src="./assets/projects/geoaltitude.webp" alt="Interface do OpenGeoaltitude: conversão de altitude em lote com o geóide oficial" width="100%" />
+
 Converte altitude geométrica em ortométrica usando o modelo geoidal do IBGE. O erro que evita é de metros, e é justamente ele que quebra nivelamento em campo.
 
+**[curupira-gis](https://github.com/ils15/curupira-gis)**
+
+SIG desktop para monitoramento florestal. Rust e egui na interface, dados em PostGIS com SIRGAS 2000 (SRID 4674).
+
 **[rbmc-ntrip-real-time-monitor](https://github.com/ils15/rbmc-ntrip-real-time-monitor)**
+
 Acompanha em tempo real a saúde de streams NTRIP/RTK: latência, idade da correção e queda de sinal. Serve para saber se o problema é o receptor ou a base.
+
+---
+
+### Outros projetos no ar
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/ils15/br-deforestation"><img src="./assets/projects/br-deforestation.webp" alt="Painel BR Deforestation com indicadores de desmatamento" width="100%" /></a>
+<b><a href="https://github.com/ils15/br-deforestation">br-deforestation</a></b><br/>
+<sub>Visualização de dados de desmatamento no Brasil</sub>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/ils15/condominio-dados-abertos"><img src="./assets/projects/condominio-dados-abertos.webp" alt="Portal de dados abertos do condomínio conforme NBR 5674" width="100%" /></a>
+<b><a href="https://github.com/ils15/condominio-dados-abertos">condominio-dados-abertos</a></b><br/>
+<sub>Transparência da manutenção predial, NBR 5674</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/ils15/brasileirao-2026"><img src="./assets/projects/brasileirao-2026.webp" alt="Painel do Brasileirão 2026 com classificação da Série A" width="100%" /></a>
+<b><a href="https://github.com/ils15/brasileirao-2026">brasileirao-2026</a></b><br/>
+<sub>Painel de dados da Série A</sub>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/ils15/pantheon-opencode"><img src="./assets/projects/pantheon-opencode.webp" alt="Documentação do Pantheon, sistema de orquestração multiagente" width="100%" /></a>
+<b><a href="https://github.com/ils15/pantheon-opencode">pantheon-opencode</a></b><br/>
+<sub>Orquestração multiagente para agentes de código</sub>
+</td>
+</tr>
+</table>
 
 ---
 
@@ -39,17 +78,6 @@ Acompanha em tempo real a saúde de streams NTRIP/RTK: latência, idade da corre
 | 📊 **Estatística e dados** | Análises, indicadores e publicação de dados abertos |
 | 🛰️ **Geomática** | Sistemas de coordenadas, modelos geoidais, RTK/NTRIP |
 | 🤖 **Bots e canais** | Automação em Telegram — [*Ofertas da China 2.0*](https://ofertachina.com.br) |
-
----
-
-### Outros projetos
-
-| Projeto | O que é | Stack |
-| :--- | :--- | :--- |
-| **[br-deforestation](https://github.com/ils15/br-deforestation)** | Visualização de dados de desmatamento no Brasil. | ![TypeScript](https://img.shields.io/badge/TypeScript-3B82F6?style=flat-square&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-38BDF8?style=flat-square&logo=python&logoColor=white) |
-| **[condominio-dados-abertos](https://github.com/ils15/condominio-dados-abertos)** | Portal de dados abertos da manutenção predial (NBR 5674). | ![TypeScript](https://img.shields.io/badge/TypeScript-3B82F6?style=flat-square&logo=typescript&logoColor=white) |
-| **[pantheon-opencode](https://github.com/ils15/pantheon-opencode)** | Orquestração multiagente para agentes de código. | ![JavaScript](https://img.shields.io/badge/JavaScript-3B82F6?style=flat-square&logo=javascript&logoColor=white) |
-| **[download_manager](https://github.com/ils15/download_manager)** | Gerenciador de downloads em Rust para Windows. | ![Rust](https://img.shields.io/badge/Rust-3B82F6?style=flat-square&logo=rust&logoColor=white) |
 
 ---
 
