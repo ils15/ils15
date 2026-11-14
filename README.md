@@ -1,12 +1,12 @@
 <!--
   GitHub Profile README — ils15  (theme: violet #7C5CFF / cyan #22D3EE on #0B0B12)
   To publish: create a PUBLIC repo named exactly "ils15" and place this file at README.md
-  TODO markers below = personal data to fill in (name, links). Everything else is ready.
+  TODO marker below = social links to fill in. Everything else is ready.
 -->
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0B12,50:7C5CFF,100:22D3EE&height=170&section=header&text=ils15&fontSize=52&fontColor=FFFFFF&fontAlignY=38&animation=fadeIn" alt="ils15" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0B12,50:7C5CFF,100:22D3EE&height=170&section=header&text=Igor%20Silva&fontSize=52&fontColor=FFFFFF&fontAlignY=38&animation=fadeIn" alt="ils15" width="100%" />
 
 **Geospatial software, Earth observation and desktop tooling for the Amazon.**
 
@@ -14,7 +14,7 @@
 
 <a href="https://github.com/ils15?tab=repositories"><img src="https://img.shields.io/badge/Repositories-ils15-7C5CFF?style=flat-square&labelColor=0B0B12" alt="Repositories" /></a>
 <a href="https://github.com/ils15"><img src="https://img.shields.io/badge/GitHub-ils15-22D3EE?style=flat-square&labelColor=0B0B12&logo=github&logoColor=white" alt="GitHub" /></a>
-<!-- TODO: add LinkedIn / email / personal site badges here -->
+<!-- TODO: add LinkedIn / email / personal site badges here (name already set: Igor Silva) -->
 
 </div>
 
