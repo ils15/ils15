@@ -1,97 +1,59 @@
-<!--
-  GitHub Profile README — ils15  (theme: violet #7C5CFF / cyan #22D3EE on #0B0B12)
-  To publish: create a PUBLIC repo named exactly "ils15" and place this file at README.md
-  TODO marker below = social links to fill in. Everything else is ready.
--->
+<h1 align="center">Igor Leite da Silva</h1>
 
-<div align="center">
+<p align="center">
+  <img src="https://avatars.githubusercontent.com/u/24917659?v=4" width="92" alt="Igor Leite da Silva" />
+</p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0B12,50:7C5CFF,100:22D3EE&height=170&section=header&text=Igor%20Silva&fontSize=52&fontColor=FFFFFF&fontAlignY=38&animation=fadeIn" alt="ils15" width="100%" />
+<p align="center"><b>Desenvolvedor Python · Estatística · Geomática</b></p>
 
-**Geospatial software, Earth observation and desktop tooling for the Amazon.**
+<p align="center">
+  São José dos Campos, SP ·
+  <a href="https://www.escavador.com/sobre/5540381/igor-leite-da-silva">Currículo Lattes</a> ·
+  <a href="https://ofertachina.com.br">Ofertas da China</a> ·
+  <a href="https://rastreiobot.xyz">RastreioBot</a>
+</p>
 
-<sub>Rust · TypeScript · Python · PostGIS · egui</sub>
+Desenvolvo software onde medição vira decisão: sistemas de coordenadas, modelos geoidais, correção RTK e pipelines de dados em Python. Boa parte do meu trabalho é substituir planilha e processo manual por uma ferramenta que roda sozinha.
 
-<a href="https://github.com/ils15?tab=repositories"><img src="https://img.shields.io/badge/Repositories-ils15-7C5CFF?style=flat-square&labelColor=0B0B12" alt="Repositories" /></a>
-<a href="https://github.com/ils15"><img src="https://img.shields.io/badge/GitHub-ils15-22D3EE?style=flat-square&labelColor=0B0B12&logo=github&logoColor=white" alt="GitHub" /></a>
-<!-- TODO: add LinkedIn / email / personal site badges here (name already set: Igor Silva) -->
+## O que estou construindo
 
-</div>
+**[curupira-gis](https://github.com/ils15/curupira-gis)** — SIG desktop para monitoramento florestal. Rust e egui na interface, dados em PostGIS com SIRGAS 2000 (SRID 4674). Nasceu da necessidade de trabalhar com datum brasileiro sem depender de licença proprietária.
 
----
+**[geoaltitude](https://github.com/ils15/geoaltitude)** — converte altitude geométrica em ortométrica usando o modelo geoidal do IBGE. O erro que evita é de metros, e é justamente ele que quebra nivelamento em campo.
 
-### What I work on
+**[rbmc-ntrip-real-time-monitor](https://github.com/ils15/rbmc-ntrip-real-time-monitor)** — acompanha em tempo real a saúde de streams NTRIP/RTK: latência, idade da correção e queda de sinal. Serve para saber se o problema é o receptor ou a base.
 
-| Area | Work |
-| :--- | :--- |
-| 🛰️ **Geospatial & Earth observation** | Deforestation analysis from satellite data, geoid-based altitude conversion, real-time RTK/NTRIP correction streams |
-| 🗺️ **Desktop GIS** | A clean-room GIS for Amazon forest monitoring — Rust + egui + PostGIS, SIRGAS 2000 (SRID 4674) |
-| ⚙️ **Systems & tooling** | Rust utilities for Windows, native installers, browser extensions |
-| 🤖 **AI engineering** | Multi-agent orchestration for coding agents, and AI-assisted CAD over MCP |
+**[open3dcalc](https://github.com/ils15/open3dcalc)** — calculadora de impressão 3D e utilitários de fluxo G-code.
 
----
+**[pantheon-opencode](https://github.com/ils15/pantheon-opencode)** — orquestração de agentes de código com roteamento por domínio e gates de qualidade.
 
-### Selected projects
+**[download_manager](https://github.com/ils15/download_manager)** — gerenciador de downloads em Rust para Windows: fila HTTP/HTTPS, retomada, extensão de navegador e instalador.
 
-| Project | What it is | Stack |
-| :--- | :--- | :--- |
-| **[curupira-gis](https://github.com/ils15/curupira-gis)** | Clean-room desktop GIS for Amazon forest monitoring (TerraAmazon-like), built on PostGIS with SRID 4674. | ![Rust](https://img.shields.io/badge/Rust-7C5CFF?style=flat-square&logo=rust&logoColor=white) ![PostGIS](https://img.shields.io/badge/PostGIS-22D3EE?style=flat-square&logo=postgresql&logoColor=white) |
-| **[open3dcalc](https://github.com/ils15/open3dcalc)** | 3D-printing calculator and G-code workflow tooling. | ![TypeScript](https://img.shields.io/badge/TypeScript-7C5CFF?style=flat-square&logo=typescript&logoColor=white) ![G-code](https://img.shields.io/badge/G--code-22D3EE?style=flat-square) |
-| **[br-deforestation](https://github.com/ils15/br-deforestation)** | Visualizing Brazilian deforestation data. | ![TypeScript](https://img.shields.io/badge/TypeScript-7C5CFF?style=flat-square&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-22D3EE?style=flat-square&logo=python&logoColor=white) |
-| **[geoaltitude](https://github.com/ils15/geoaltitude)** | Altitude converter using the IBGE geoid model. | ![TypeScript](https://img.shields.io/badge/TypeScript-7C5CFF?style=flat-square&logo=typescript&logoColor=white) |
-| **[rbmc-ntrip-real-time-monitor](https://github.com/ils15/rbmc-ntrip-real-time-monitor)** | Real-time monitoring of NTRIP/RTK correction streams. | ![JavaScript](https://img.shields.io/badge/JavaScript-7C5CFF?style=flat-square&logo=javascript&logoColor=white) |
-| **[download_manager](https://github.com/ils15/download_manager)** | Independent Rust download manager for Windows: HTTP/HTTPS queue, resume, Chrome extension, Inno Setup installer. | ![Rust](https://img.shields.io/badge/Rust-7C5CFF?style=flat-square&logo=rust&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-22D3EE?style=flat-square&logo=windows&logoColor=white) |
-| **[pantheon-opencode](https://github.com/ils15/pantheon-opencode)** | Multi-agent orchestration system for OpenCode — specialized agents, routing and quality gates. | ![JavaScript](https://img.shields.io/badge/JavaScript-7C5CFF?style=flat-square&logo=javascript&logoColor=white) ![Python](https://img.shields.io/badge/Python-22D3EE?style=flat-square&logo=python&logoColor=white) |
-| **[ai-drawer](https://github.com/ils15/ai-drawer)** | AI drawing suite: OpenCode/Claude → Autodesk Fusion via MCP. | ![Python](https://img.shields.io/badge/Python-7C5CFF?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-22D3EE?style=flat-square&logo=typescript&logoColor=white) |
-| **[condominio-dados-abertos](https://github.com/ils15/condominio-dados-abertos)** | Open-data portal for building maintenance transparency (NBR 5674). | ![TypeScript](https://img.shields.io/badge/TypeScript-7C5CFF?style=flat-square&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-22D3EE?style=flat-square&logo=python&logoColor=white) |
+## Produtos no ar
 
----
+**[Ofertas da China](https://ofertachina.com.br)** — guias de compra e cupons para importados, com bots e canais em Telegram.
 
-### Toolbox
+**[RastreioBot](https://rastreiobot.xyz)** — rastreamento de encomendas por bot ([@rastreiobot](https://t.me/rastreiobot)).
 
-<table>
-<tr><td><b>Languages</b></td><td>
-<img src="https://img.shields.io/badge/TypeScript-7C5CFF?style=flat-square&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/Rust-7C5CFF?style=flat-square&logo=rust&logoColor=white" />
-<img src="https://img.shields.io/badge/Python-7C5CFF?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/JavaScript-7C5CFF?style=flat-square&logo=javascript&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-7C5CFF?style=flat-square&logo=postgresql&logoColor=white" />
-</td></tr>
-<tr><td><b>Data &amp; geo</b></td><td>
-<img src="https://img.shields.io/badge/PostgreSQL-22D3EE?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/PostGIS-22D3EE?style=flat-square" />
-<img src="https://img.shields.io/badge/SIRGAS%202000-22D3EE?style=flat-square" />
-</td></tr>
-<tr><td><b>Desktop &amp; UI</b></td><td>
-<img src="https://img.shields.io/badge/egui-7C5CFF?style=flat-square" />
-<img src="https://img.shields.io/badge/Slint-7C5CFF?style=flat-square" />
-</td></tr>
-<tr><td><b>Tooling</b></td><td>
-<img src="https://img.shields.io/badge/Docker-7C5CFF?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Git-22D3EE?style=flat-square&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/Linux-22D3EE?style=flat-square&logo=linux&logoColor=white" />
-</td></tr>
-</table>
+**[condominio-dados-abertos](https://github.com/ils15/condominio-dados-abertos)** — portal de dados abertos da manutenção predial, organizado em torno da NBR 5674.
+
+## Ferramentas
+
+`Python` · `TypeScript` · `Rust` · `SQL` · `PostgreSQL/PostGIS` · `pandas` · `NumPy` · `Docker` · `Linux`
+
+## Atividade
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=ils15&amp;show_icons=true&amp;hide_border=true&amp;bg_color=0A0F1A&amp;title_color=3B82F6&amp;text_color=C9D1D9&amp;icon_color=38BDF8&amp;rank_icon=github" />
+    <img src="https://github-stats-extended.vercel.app/api?username=ils15&amp;show_icons=true&amp;hide_border=true&amp;bg_color=FFFFFF&amp;title_color=1D4ED8&amp;text_color=24292F&amp;icon_color=3B82F6&amp;rank_icon=github" alt="Estatísticas do GitHub de ils15" height="165" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs?username=ils15&amp;layout=compact&amp;hide_border=true&amp;bg_color=0A0F1A&amp;title_color=3B82F6&amp;text_color=C9D1D9&amp;langs_count=8" />
+    <img src="https://github-stats-extended.vercel.app/api/top-langs?username=ils15&amp;layout=compact&amp;hide_border=true&amp;bg_color=FFFFFF&amp;title_color=1D4ED8&amp;text_color=24292F&amp;langs_count=8" alt="Linguagens mais usadas: TypeScript, Rust e Python" height="165" />
+  </picture>
+</p>
 
 ---
 
-### GitHub at a glance
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ils15&show_icons=true&hide_border=true&bg_color=0B0B12&title_color=7C5CFF&icon_color=22D3EE&text_color=C9D1D9&rank_icon=github" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ils15&layout=compact&hide_border=true&bg_color=0B0B12&title_color=7C5CFF&text_color=C9D1D9&langs_count=8" alt="Top languages" />
-
-<img src="https://streak-stats.demolab.com?user=ils15&hide_border=true&background=0B0B12&stroke=7C5CFF&ring=22D3EE&fire=7C5CFF&currStreakNum=FFFFFF&currStreakLabel=C9D1D9&sideNums=FFFFFF&sideLabels=C9D1D9&dates=6B7280" alt="Streak" />
-
-</div>
-
----
-
-### Currently
-
-- Extending **curupira-gis** — a desktop GIS for Amazon forest monitoring
-- Building **pantheon-opencode** — multi-agent orchestration for coding agents
-- Exploring AI-assisted CAD through the Model Context Protocol
-
-<sub>Open to collaboration on geospatial tooling, Earth observation and developer tooling.</sub>
+<sub>Aberto a conversas sobre geomática, dados espaciais e automação em Python.</sub>
