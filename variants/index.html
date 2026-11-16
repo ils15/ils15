@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Igor Leite da Silva — README preview</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233B82F6'/%3E%3C/svg%3E" />
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  :root {
+    --bg: #0A0F1A;
+    --surface: #0F1729;
+    --border: #1E2A44;
+    --primary: #3B82F6;
+    --accent: #38BDF8;
+    --text: #C9D1D9;
+    --muted: #8B949E;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(10, 15, 26, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .topbar-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+  }
+
+  .brand {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  .brand .dim { color: var(--muted); font-weight: 500; }
+
+  .tabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    min-width: 0;
+    max-width: 100%;
+    padding-bottom: 2px;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    appearance: none;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: var(--muted);
+    font: inherit;
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 7px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .15s, background .15s, border-color .15s;
+  }
+
+  .tab:hover { color: var(--text); background: #131F35; }
+
+  .tab[aria-selected="true"] {
+    color: #fff;
+    background: #12233E;
+    border-color: rgba(59, 130, 246, 0.55);
+    box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.15);
+  }
+
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* A tab whose markdown 404'd twice: still visible, clearly unavailable. */
+  .tab[aria-disabled="true"] {
+    color: #5A6472;
+    opacity: 0.6;
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    cursor: not-allowed;
+  }
+
+  .tab[aria-disabled="true"]:hover {
+    color: #5A6472;
+    background: transparent;
+  }
+
+  /* ---------- page ---------- */
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 20px 64px;
+  }
+
+  /* ---------- banner ---------- */
+  .banner {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #0F1E36;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-left: 3px solid var(--primary);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 0 20px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #AFC0D8;
+  }
+
+  .banner strong { color: #DCE8FA; font-weight: 600; }
+  .banner code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 12.5px;
+    background: #0A0F1A;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1px 5px;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .banner p { margin: 0; }
+
+  .banner-close {
+    flex: 0 0 auto;
+    margin-left: auto;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--muted);
+    border-radius: 6px;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .banner-close:hover { color: #fff; border-color: var(--border); background: #16213A; }
+  .banner-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- pane ---------- */
+  .pane {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .pane-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 16px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    background: #0D1424;
+  }
+
+  .note {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--muted);
+    flex: 1 1 320px;
+    min-width: 0;
+  }
+
+  .note::before {
+    content: "→ ";
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .modes {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2px;
+    background: #0A0F1A;
+    flex: 0 0 auto;
+  }
+
+  .mode {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    color: var(--muted);
+    font: inherit;
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 6px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .mode:hover { color: var(--text); }
+
+  .mode.is-active {
+    background: #14243F;
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.5);
+  }
+
+  .mode:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .pane-body { padding: 8px 0 40px; }
+
+  .pane-body[hidden] { display: none; }
+
+  /* ---------- rendered README (GitHub dark approximation) ---------- */
+  /* README prose keeps its own GitHub-like palette, independent of the chrome
+     tokens above: these scoped values intentionally stay at the original
+     neutral-gray / cyan pair. */
+  .readme {
+    --border: #22222E;
+    --link: #22D3EE;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 40px 16px;
+    overflow-wrap: break-word;
+  }
+
+  .readme h1,
+  .readme h2 {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.3em;
+  }
+
+  .readme h1 { font-size: 2em; margin: 0.67em 0; font-weight: 600; }
+  .readme h2 { font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; }
+  .readme h3 { font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; }
+  .readme h4 { font-size: 1em; margin: 24px 0 16px; font-weight: 600; }
+  .readme h1:first-child,
+  .readme h2:first-child,
+  .readme h3:first-child { margin-top: 0; }
+
+  .readme p { margin: 0 0 16px; }
+
+  .readme a { color: var(--link); text-decoration: none; }
+  .readme a:hover { text-decoration: underline; }
+
+  .readme img {
+    max-width: 100%;
+    box-sizing: content-box;
+    background: transparent;
+  }
+
+  .readme table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+    margin: 0 0 16px;
+  }
+
+  .readme table th,
+  .readme table td {
+    border: 1px solid var(--border);
+    padding: 6px 13px;
+    vertical-align: top;
+  }
+
+  .readme table th { background: #16161f; font-weight: 600; }
+  .readme table tr:nth-child(2n) { background: #0f0f17; }
+  .readme table img { vertical-align: middle; }
+
+  .readme pre {
+    background: #0d0d14;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    overflow: auto;
+    margin: 0 0 16px;
+    line-height: 1.45;
+  }
+
+  .readme code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 85%;
+    background: #16161f;
+    border-radius: 6px;
+    padding: 0.2em 0.4em;
+  }
+
+  .readme pre code {
+    background: transparent;
+    padding: 0;
+    font-size: 100%;
+    white-space: pre;
+  }
+
+  .readme blockquote {
+    margin: 0 0 16px;
+    padding: 0 1em;
+    color: #9aa4ae;
+    border-left: 0.25em solid var(--border);
+  }
+
+  .readme blockquote > :last-child { margin-bottom: 0; }
+
+  .readme hr {
+    height: 0;
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .readme ul,
+  .readme ol { margin: 0 0 16px; padding-left: 2em; }
+
+  .readme li { margin: 0.25em 0; }
+  .readme li > ul, .readme li > ol { margin-top: 0.25em; }
+
+  .readme sub { font-size: 75%; }
+  .readme strong { font-weight: 600; color: #e6edf3; }
+
+  .readme div[align="center"] { margin-bottom: 16px; }
+  .readme div[align="center"] > p { margin-bottom: 8px; }
+
+  /* ---------- source view ---------- */
+  .source {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 40px 0;
+  }
+
+  .source-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  .source-head .file { color: var(--accent); }
+
+  .copy {
+    margin-left: auto;
+    appearance: none;
+    background: #12233E;
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    border-radius: 7px;
+    color: #DCE8FA;
+    font: inherit;
+    font-size: 12.5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .copy:hover { border-color: var(--primary); color: #fff; }
+  .copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .copy.is-copied { border-color: var(--accent); color: var(--accent); }
+
+  .source pre {
+    background: #0d0d14;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    overflow: auto;
+    margin: 0;
+    max-height: 70vh;
+  }
+
+  .source pre code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #c9d1d9;
+    white-space: pre;
+    background: transparent;
+    padding: 0;
+  }
+
+  .status {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .status.error { color: #f85149; }
+
+  .status .status-file {
+    margin-top: 6px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 720px) {
+    .topbar-inner { padding: 10px 12px; gap: 8px; }
+    .brand { font-size: 13.5px; }
+
+    .tabs {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      width: 100%;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .page { padding: 16px 10px 48px; }
+    .pane-head { padding: 12px 14px; }
+    .readme { padding: 20px 16px 4px; }
+    .source { padding: 16px 14px 0; }
+    .readme table { font-size: 13px; }
+    .readme table th, .readme table td { padding: 5px 9px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="brand">Igor Leite da Silva <span class="dim">— README preview</span></h1>
+    <nav class="tabs" role="tablist" aria-label="README variants">
+      <button class="tab" role="tab" id="tab-v7" data-variant="v7" aria-controls="pane" aria-selected="true">V7 · Credibilidade</button>
+      <button class="tab" role="tab" id="tab-v8" data-variant="v8" aria-controls="pane" aria-selected="false">V8 · Moderno (SVG)</button>
+      <button class="tab" role="tab" id="tab-v1" data-variant="v1" aria-controls="pane" aria-selected="false">Variant 1 · Clean</button>
+      <button class="tab" role="tab" id="tab-v2" data-variant="v2" aria-controls="pane" aria-selected="false">Variant 2 · Data</button>
+      <button class="tab" role="tab" id="tab-v3" data-variant="v3" aria-controls="pane" aria-selected="false">Variant 3 · Animated</button>
+      <button class="tab" role="tab" id="tab-v4" data-variant="v4" aria-controls="pane" aria-selected="false">Variant 4 · PT-BR</button>
+      <button class="tab" role="tab" id="tab-v5" data-variant="v5" aria-controls="pane" aria-selected="false">V5 · PT-BR Azul</button>
+      <button class="tab" role="tab" id="tab-v6" data-variant="v6" aria-controls="pane" aria-selected="false">V6 · PT-BR Mono</button>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="banner" id="banner" role="note">
+    <p>
+      <strong>Preview notes.</strong> Stats cards use <code>github-stats-extended</code> because
+      <code>github-readme-stats</code> returned 503 at build time. All external images (badges,
+      capsule-render, cards) need internet access to render.
+    </p>
+    <button class="banner-close" id="banner-close" type="button" aria-label="Dismiss preview notes">×</button>
+  </div>
+
+  <section class="pane" role="tabpanel" id="pane" aria-labelledby="tab-v7" tabindex="0">
+    <div class="pane-head">
+      <p class="note" id="note"></p>
+      <div class="modes" role="group" aria-label="View mode">
+        <button class="mode is-active" type="button" data-mode="preview" aria-pressed="true">Preview</button>
+        <button class="mode" type="button" data-mode="source" aria-pressed="false">Markdown source</button>
+      </div>
+    </div>
+
+    <div class="pane-body" id="view-preview">
+      <div class="readme" id="readme"></div>
+    </div>
+
+    <div class="pane-body" id="view-source" hidden>
+      <div class="source">
+        <div class="source-head">
+          <span class="file" id="source-file"></span>
+          <button class="copy" id="copy" type="button">Copy</button>
+        </div>
+        <pre><code id="source-code"></code></pre>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  var VARIANTS = {
+    v7: {
+      file: "variant-7-credibilidade.md",
+      note: "Estrutura final: texto + links + provas. Sem parede de badges, cards só com <picture> dark/light."
+    },
+    v8: {
+      file: "variant-8-modern.md",
+      note: "Hero SVG próprio + paleta azul. Sem serviços de badge; só os 2 cards de stats no fim."
+    },
+    v1: {
+      file: "variant-1-clean.md",
+      note: "Equilíbrio: identidade forte, leitura rápida, quase nenhuma animação. Menor risco de quebrar."
+    },
+    v2: {
+      file: "variant-2-data.md",
+      note: "Foco em dados: cards de estatística e resumo de perfil em destaque. Melhor se você quer parecer analista/sênior."
+    },
+    v3: {
+      file: "variant-3-animated.md",
+      note: "Mais chamativo: typing SVG + snake de contribuições. Exige um workflow no repo (fornecido em snake-workflow.yml)."
+    },
+    v4: {
+      file: "variant-4-ptbr.md",
+      note: "Versão em português, com Lattes em destaque. Melhor para audiência brasileira e recrutadores locais."
+    },
+    v5: {
+      file: "variant-5-ptbr-blue.md",
+      note: "Azul royal com acento ciano — evolução direta do V4 que você gostou."
+    },
+    v6: {
+      file: "variant-6-ptbr-mono.md",
+      note: "Azul monocromático, sem ciano. Mais sóbrio e corporativo."
+    }
+  };
+
+  var ORDER = ["v7", "v8", "v1", "v2", "v3", "v4", "v5", "v6"];
+  var DEFAULT_VARIANT = "v7";
+  var RETRY_DELAY_MS = 400;
+  var MAX_ATTEMPTS = 2;
+  var cache = {};
+  var current = DEFAULT_VARIANT;
+  var mode = "preview";
+  var requestId = 0;
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  var modes = Array.prototype.slice.call(document.querySelectorAll(".mode"));
+  var noteEl = document.getElementById("note");
+  var readmeEl = document.getElementById("readme");
+  var viewPreview = document.getElementById("view-preview");
+  var viewSource = document.getElementById("view-source");
+  var sourceFileEl = document.getElementById("source-file");
+  var sourceCodeEl = document.getElementById("source-code");
+  var copyBtn = document.getElementById("copy");
+  var pane = document.getElementById("pane");
+
+  if (window.marked && typeof window.marked.setOptions === "function") {
+    window.marked.setOptions({ gfm: true, breaks: false, headerIds: false, mangle: false });
+  }
+
+  function renderMarkdown(raw) {
+    if (window.marked && typeof window.marked.parse === "function") {
+      return window.marked.parse(raw);
+    }
+    var pre = document.createElement("pre");
+    pre.textContent = raw;
+    return pre.outerHTML;
+  }
+
+  function showStatus(message, isError) {
+    readmeEl.innerHTML = "";
+    var div = document.createElement("div");
+    div.className = "status" + (isError ? " error" : "");
+    div.textContent = message;
+    readmeEl.appendChild(div);
+  }
+
+  function paintSource() {
+    var entry = cache[current];
+    viewSource.hidden = mode !== "source";
+    viewPreview.hidden = mode === "source";
+    if (mode === "source") {
+      sourceFileEl.textContent = VARIANTS[current].file;
+      sourceCodeEl.textContent = entry ? entry.raw : "";
+      copyBtn.disabled = !entry;
+      resetCopyLabel();
+    }
+  }
+
+  function resetCopyLabel() {
+    copyBtn.textContent = "Copy";
+    copyBtn.classList.remove("is-copied");
+  }
+
+  function revealTab(tab) {
+    var strip = tab.parentNode;
+    if (!strip || strip.scrollWidth <= strip.clientWidth) return;
+    var stripRect = strip.getBoundingClientRect();
+    var tabRect = tab.getBoundingClientRect();
+    var pad = 8;
+    // Scroll the tab strip only — never the page. scrollIntoView() would drag
+    // the whole document to the top because the strip lives in a sticky bar.
+    if (tabRect.left < stripRect.left + pad) {
+      strip.scrollLeft -= (stripRect.left + pad) - tabRect.left;
+    } else if (tabRect.right > stripRect.right - pad) {
+      strip.scrollLeft += tabRect.right - (stripRect.right - pad);
+    }
+  }
+
+  function paintTabs() {
+    tabs.forEach(function (tab) {
+      var id = tab.getAttribute("data-variant");
+      var selected = id === current;
+      tab.setAttribute("aria-selected", selected ? "true" : "false");
+      tab.tabIndex = selected ? 0 : -1;
+      if (selected) revealTab(tab);
+    });
+    pane.setAttribute("aria-labelledby", "tab-" + current);
+    noteEl.textContent = VARIANTS[current].note;
+  }
+
+  function paintModes() {
+    modes.forEach(function (btn) {
+      var active = btn.getAttribute("data-mode") === mode;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  function setTabAvailable(id, available) {
+    var tab = document.getElementById("tab-" + id);
+    if (!tab) return;
+    if (available) {
+      tab.classList.remove("is-missing");
+      tab.removeAttribute("aria-disabled");
+      tab.removeAttribute("title");
+    } else {
+      tab.classList.add("is-missing");
+      tab.setAttribute("aria-disabled", "true");
+      tab.title = VARIANTS[id].file + " não está disponível.";
+    }
+  }
+
+  function failureMessage(status) {
+    if (status === 404) {
+      return "Arquivo da variante não encontrado (pode estar sendo gerado). Recarregue em alguns segundos.";
+    }
+    if (typeof status !== "number") {
+      return "Falha de rede ao carregar a variante.";
+    }
+    return "Falha ao carregar a variante (HTTP " + status + ").";
+  }
+
+  function showFailure(id, status) {
+    readmeEl.innerHTML = "";
+    var box = document.createElement("div");
+    box.className = "status error";
+    box.textContent = failureMessage(status);
+    var file = document.createElement("div");
+    file.className = "status-file";
+    file.textContent = "Arquivo: " + VARIANTS[id].file;
+    box.appendChild(file);
+    readmeEl.appendChild(box);
+  }
+
+  function attemptFetch(id, token, attempt) {
+    fetch("./" + VARIANTS[id].file, { cache: "no-cache" })
+      .then(function (res) {
+        if (!res.ok) {
+          var httpErr = new Error("HTTP " + res.status);
+          httpErr.status = res.status;
+          throw httpErr;
+        }
+        return res.text();
+      })
+      .then(function (raw) {
+        cache[id] = { raw: raw, html: renderMarkdown(raw) };
+        setTabAvailable(id, true);
+        if (token !== requestId || current !== id) return;
+        readmeEl.innerHTML = cache[id].html;
+        paintSource();
+      })
+      .catch(function (err) {
+        var status = err && typeof err.status === "number" ? err.status : null;
+        // A file that is mid-write can 404 for a beat: retry once, briefly.
+        if (attempt < MAX_ATTEMPTS) {
+          window.setTimeout(function () { attemptFetch(id, token, attempt + 1); }, RETRY_DELAY_MS);
+          return;
+        }
+        cache[id] = null;
+        if (status === 404) setTabAvailable(id, false);
+        if (token !== requestId || current !== id) return;
+        showFailure(id, status);
+        paintSource();
+      });
+  }
+
+  function load(id) {
+    current = id;
+    paintTabs();
+    paintModes();
+
+    var entry = cache[id];
+    if (entry) {
+      readmeEl.innerHTML = entry.html;
+      paintSource();
+      return;
+    }
+
+    var token = ++requestId;
+    cache[id] = null;
+
+    showStatus("Loading " + VARIANTS[id].file + " …", false);
+    attemptFetch(id, token, 1);
+  }
+
+  function routeFromHash() {
+    var hash = (location.hash || "").replace(/^#/, "").toLowerCase();
+    return VARIANTS[hash] ? hash : null;
+  }
+
+  function syncFromHash() {
+    var id = routeFromHash();
+    if (!id) {
+      id = DEFAULT_VARIANT;
+      history.replaceState(null, "", "#" + id);
+    }
+    if (id !== current || !cache[id]) load(id);
+    else { paintTabs(); paintModes(); }
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var id = tab.getAttribute("data-variant");
+      if (tab.getAttribute("aria-disabled") === "true") return;
+      if (id === current) return;
+      if (location.hash !== "#" + id) {
+        history.pushState(null, "", "#" + id);
+      }
+      load(id);
+    });
+
+    tab.addEventListener("keydown", function (e) {
+      var idx = ORDER.indexOf(tab.getAttribute("data-variant"));
+      var next = null;
+      if (e.key === "ArrowRight") next = ORDER[(idx + 1) % ORDER.length];
+      else if (e.key === "ArrowLeft") next = ORDER[(idx - 1 + ORDER.length) % ORDER.length];
+      else if (e.key === "Home") next = ORDER[0];
+      else if (e.key === "End") next = ORDER[ORDER.length - 1];
+      if (!next) return;
+      e.preventDefault();
+      var target = document.getElementById("tab-" + next);
+      history.pushState(null, "", "#" + next);
+      load(next);
+      if (target) target.focus();
+    });
+  });
+
+  modes.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      mode = btn.getAttribute("data-mode");
+      paintModes();
+      paintSource();
+    });
+  });
+
+  copyBtn.addEventListener("click", function () {
+    var entry = cache[current];
+    if (!entry) return;
+    resetCopyLabel();
+
+    function done() {
+      copyBtn.textContent = "Copied";
+      copyBtn.classList.add("is-copied");
+      window.setTimeout(resetCopyLabel, 1600);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(entry.raw).then(done).catch(fallback);
+    } else {
+      fallback();
+    }
+
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = entry.raw;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.top = "-1000px";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { /* no-op */ }
+      document.body.removeChild(ta);
+    }
+  });
+
+  document.getElementById("banner-close").addEventListener("click", function () {
+    var banner = document.getElementById("banner");
+    if (banner && banner.parentNode) banner.parentNode.removeChild(banner);
+  });
+
+  window.addEventListener("hashchange", syncFromHash);
+  window.addEventListener("popstate", syncFromHash);
+
+  var resizeTimer = null;
+  window.addEventListener("resize", function () {
+    if (resizeTimer) window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(paintTabs, 150);
+  });
+
+  syncFromHash();
+})();
+</script>
+</body>
+</html>
